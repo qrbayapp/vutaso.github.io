@@ -7,10 +7,10 @@
     <style>
         /* Global Styles */
         :root {
-            --primary-color: #c21a6c; /* Navy blue for headers and accents */
+            --primary-color: #c21a6c; /* Pink for headers and accents */
             --secondary-color: #ffffff; /* White for backgrounds */
             --accent-color: #c21a6c; /* Teal for buttons and highlights */
-            --text-color: #000000; /* Dark gray for text */
+            --text-color: #333333; /* Dark gray for text */
             --border-color: #e0e4e8; /* Light gray for borders */
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
@@ -44,6 +44,7 @@
             color: var(--primary-color);
             margin-bottom: 1.5rem;
             font-weight: 700;
+            text-align: center;
         }
 
         h2 {
@@ -51,6 +52,8 @@
             color: var(--primary-color);
             margin: 2rem 0 1rem;
             font-weight: 600;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
         }
 
         h3 {
@@ -70,12 +73,18 @@
         p, li {
             font-size: 1rem;
             margin-bottom: 1rem;
+            text-align: justify;
         }
 
         ul {
             list-style-type: disc;
             margin-left: 20px;
             margin-bottom: 1rem;
+        }
+
+        ul li strong {
+            font-weight: 600;
+            color: var(--primary-color);
         }
 
         a {
@@ -121,12 +130,20 @@
             transform: none;
         }
 
+        /* Special Styling */
         .highlight {
             background-color: #f0f9ff;
             padding: 15px;
             border-left: 4px solid var(--accent-color);
             border-radius: 4px;
             margin: 1rem 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: #6b7280;
+            margin-bottom: 2rem;
         }
 
         /* Responsive Design */
@@ -234,7 +251,7 @@
         </div>
         <div id="content">
             <h1 data-key="title">Chính sách Bảo mật - MoneyBay</h1>
-            <p data-key="last-updated">Cập nhật lần cuối: Ngày 12 tháng 7 năm 2025</p>
+            <p class="last-updated" data-key="last-updated">Cập nhật lần cuối: Ngày 12 tháng 7 năm 2025</p>
 
             <div class="highlight">
                 <p data-key="intro-text">MoneyBay cam kết bảo vệ quyền riêng tư và dữ liệu tài chính của bạn. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi sử dụng ứng dụng quản lý chi tiêu MoneyBay.</p>
@@ -248,8 +265,8 @@
             <p data-key="definitions-text">Cho mục đích của Chính sách Bảo mật này:</p>
             <ul>
                 <li data-key="def-account"><strong>Tài khoản:</strong> Tài khoản duy nhất được tạo để bạn truy cập vào ứng dụng MoneyBay hoặc các phần của ứng dụng.</li>
-                <li data-key="def-app"><strong>Ứng dụng:</strong> Chỉ ứng dụng phần mềm MoneyBay - ứng dụng quản lý chi tiêu cá nhân do Vutas Studio cung cấp.</li>
-                <li data-key="def-company"><strong>Công ty:</strong> Vutas Studio (cũng được gọi là "Chúng tôi", "Của chúng tôi" hoặc "Chúng ta" trong Chính sách Bảo mật này).</li>
+                <li data-key="def-app"><strong>Ứng dụng:</strong> Chỉ ứng dụng phần mềm MoneyBay - ứng dụng quản lý chi tiêu cá nhân do VUTASO cung cấp.</li>
+                <li data-key="def-company"><strong>Công ty:</strong> VUTASO (cũng được gọi là "Chúng tôi", "Của chúng tôi" hoặc "Chúng ta" trong Chính sách Bảo mật này).</li>
                 <li data-key="def-country"><strong>Quốc gia:</strong> Việt Nam.</li>
                 <li data-key="def-device"><strong>Thiết bị:</strong> Bất kỳ thiết bị nào có thể truy cập ứng dụng như máy tính, điện thoại thông minh hoặc máy tính bảng.</li>
                 <li data-key="def-financial-data"><strong>Dữ liệu tài chính:</strong> Thông tin về thu nhập, chi tiêu, ngân sách và các giao dịch tài chính mà bạn nhập vào ứng dụng.</li>
@@ -337,15 +354,14 @@
                 <li data-key="user-right-2"><strong>Quyền sửa đổi:</strong> Cập nhật hoặc chỉnh sửa thông tin cá nhân không chính xác</li>
                 <li data-key="user-right-3"><strong>Quyền xóa:</strong> Yêu cầu xóa tài khoản và dữ liệu liên quan</li>
                 <li data-key="user-right-4"><strong>Quyền xuất dữ liệu:</strong> Nhận bản sao dữ liệu của bạn ở định dạng có thể đọc được</li>
-                <li data-key="user-right-5"><strong>Quyền rút đồng ý:</strong> Rút lại sự đồng ý xử lý dữ liệu bất cứ lúc nào</li>
             </ul>
 
             <h2 data-key="data-backup-title">Sao lưu và Khôi phục Dữ liệu</h2>
             <p data-key="data-backup-text">MoneyBay cung cấp tính năng sao lưu dữ liệu để bảo vệ thông tin tài chính của bạn:</p>
             <ul>
-                <li data-key="backup-feature-1">Sao lưu tự động lên Google Drive hoặc iCloud (được mã hóa)</li>
+                <li data-key="backup-feature-1">Sao lưu tự động lên iCloud</li>
                 <li data-key="backup-feature-2">Khôi phục dữ liệu khi thay đổi thiết bị</li>
-                <li data-key="backup-feature-3">Xuất dữ liệu thành file CSV hoặc Excel</li>
+                <li data-key="backup-feature-3">Xuất dữ liệu thành file CSV hoặc PDF</li>
             </ul>
 
             <h2 data-key="policy-changes-title">Thay đổi Chính sách Bảo mật</h2>
@@ -355,8 +371,8 @@
             <p data-key="contact-text">Nếu bạn có bất kỳ câu hỏi nào về Chính sách Bảo mật này hoặc muốn thực hiện quyền của mình đối với dữ liệu cá nhân, vui lòng liên hệ với chúng tôi:</p>
             <ul>
                 <li data-key="contact-email">Email: <a href="mailto:vutaso.com@gmail.com">vutaso.com@gmail.com</a></li>
-                <li data-key="contact-app">Qua ứng dụng MoneyBay: Cài đặt > Hỗ trợ > Liên hệ</li>
                 <li data-key="contact-website">Website: <a href="https://vutaso.com">https://vutaso.com</a></li>
+                <li data-key="contact-app">Qua ứng dụng MoneyBay: Nhiều hơn > Trợ giúp > Liên hệ trợ giúp</li>
             </ul>
         </div>
     </div>
@@ -373,8 +389,8 @@
                 "definitions-subtitle": "Định nghĩa",
                 "definitions-text": "Cho mục đích của Chính sách Bảo mật này:",
                 "def-account": "<strong>Tài khoản:</strong> Tài khoản duy nhất được tạo để bạn truy cập vào ứng dụng MoneyBay hoặc các phần của ứng dụng.",
-                "def-app": "<strong>Ứng dụng:</strong> Chỉ ứng dụng phần mềm MoneyBay - ứng dụng quản lý chi tiêu cá nhân do Vutas Studio cung cấp.",
-                "def-company": "<strong>Công ty:</strong> Vutas Studio (cũng được gọi là \"Chúng tôi\", \"Của chúng tôi\" hoặc \"Chúng ta\" trong Chính sách Bảo mật này).",
+                "def-app": "<strong>Ứng dụng:</strong> Chỉ ứng dụng phần mềm MoneyBay - ứng dụng quản lý chi tiêu cá nhân do VUTASO cung cấp.",
+                "def-company": "<strong>Công ty:</strong> VUTASO (cũng được gọi là \"Chúng tôi\", \"Của chúng tôi\" hoặc \"Chúng ta\" trong Chính sách Bảo mật này).",
                 "def-country": "<strong>Quốc gia:</strong> Việt Nam.",
                 "def-device": "<strong>Thiết bị:</strong> Bất kỳ thiết bị nào có thể truy cập ứng dụng như máy tính, điện thoại thông minh hoặc máy tính bảng.",
                 "def-financial-data": "<strong>Dữ liệu tài chính:</strong> Thông tin về thu nhập, chi tiêu, ngân sách và các giao dịch tài chính mà bạn nhập vào ứng dụng.",
@@ -436,10 +452,9 @@
                 "user-right-2": "<strong>Quyền sửa đổi:</strong> Cập nhật hoặc chỉnh sửa thông tin cá nhân không chính xác",
                 "user-right-3": "<strong>Quyền xóa:</strong> Yêu cầu xóa tài khoản và dữ liệu liên quan",
                 "user-right-4": "<strong>Quyền xuất dữ liệu:</strong> Nhận bản sao dữ liệu của bạn ở định dạng có thể đọc được",
-                "user-right-5": "<strong>Quyền rút đồng ý:</strong> Rút lại sự đồng ý xử lý dữ liệu bất cứ lúc nào",
                 "data-backup-title": "Sao lưu và Khôi phục Dữ liệu",
                 "data-backup-text": "MoneyBay cung cấp tính năng sao lưu dữ liệu để bảo vệ thông tin tài chính của bạn:",
-                "backup-feature-1": "Sao lưu tự động lên iCloud (được mã hóa)",
+                "backup-feature-1": "Sao lưu tự động lên iCloud",
                 "backup-feature-2": "Khôi phục dữ liệu khi thay đổi thiết bị",
                 "backup-feature-3": "Xuất dữ liệu thành file CSV hoặc PDF",
                 "policy-changes-title": "Thay đổi Chính sách Bảo mật",
@@ -460,8 +475,8 @@
                 "definitions-subtitle": "Definitions",
                 "definitions-text": "For the purposes of this Privacy Policy:",
                 "def-account": "<strong>Account:</strong> A unique account created for you to access the MoneyBay application or parts of the application.",
-                "def-app": "<strong>Application:</strong> The MoneyBay software application - a personal expense management app provided by Vutas Studio.",
-                "def-company": "<strong>Company:</strong> Vutas Studio (also referred to as \"We\", \"Our\" or \"Us\" in this Privacy Policy).",
+                "def-app": "<strong>Application:</strong> The MoneyBay software application - a personal expense management app provided by VUTASO.",
+                "def-company": "<strong>Company:</strong> VUTASO (also referred to as \"We\", \"Our\" or \"Us\" in this Privacy Policy).",
                 "def-country": "<strong>Country:</strong> Vietnam.",
                 "def-device": "<strong>Device:</strong> Any device that can access the application such as a computer, smartphone, or tablet.",
                 "def-financial-data": "<strong>Financial Data:</strong> Information about income, expenses, budgets, and financial transactions that you enter into the application.",
@@ -523,10 +538,9 @@
                 "user-right-2": "<strong>Right to Rectification:</strong> Update or correct inaccurate personal information",
                 "user-right-3": "<strong>Right to Deletion:</strong> Request deletion of your account and related data",
                 "user-right-4": "<strong>Right to Data Export:</strong> Receive a copy of your data in a readable format",
-                "user-right-5": "<strong>Right to Withdraw Consent:</strong> Withdraw consent for data processing at any time",
                 "data-backup-title": "Data Backup and Recovery",
                 "data-backup-text": "MoneyBay provides data backup features to protect your financial information:",
-                "backup-feature-1": "Automatic backup to iCloud (encrypted)",
+                "backup-feature-1": "Automatic backup to iCloud",
                 "backup-feature-2": "Data recovery when changing devices",
                 "backup-feature-3": "Export data to CSV or PDF files",
                 "policy-changes-title": "Changes to the Privacy Policy",
